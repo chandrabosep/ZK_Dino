@@ -1,0 +1,49 @@
+@import '~@superscreenpi/uikit';
+
+html,
+body,
+#root {
+  height: 100%;
+  -webkit-overflow-scrolling: auto;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    image-rendering: pixelated;
+    user-select: none;
+    background-color: var(--background);
+    position: relative;
+
+    .score-view {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 0.8rem;
+    }
+
+    canvas {
+      @media (prefers-color-scheme: dark) {
+        filter: invert(1);
+      }
+    }
+  }
+
+  * {
+    font-family: pixel-mix, monospace;
+  }
+}
+
+@import 'components/GameOver';
+
+@font-face {
+  font-family: pixel-mix;
+  src: url('./sprites/font/pixelmix.ttf') format('truetype');
+}

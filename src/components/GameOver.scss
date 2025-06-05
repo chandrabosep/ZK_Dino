@@ -1,0 +1,39 @@
+.game-over {
+  position: fixed;
+  top: 40%;
+  bottom: auto;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-60%);
+
+  h1 {
+    letter-spacing: 1rem;
+    margin-bottom: 0;
+  }
+
+  .score {
+    font-size: 2rem;
+  }
+
+  & > * {
+    text-transform: uppercase;
+  }
+
+  .button:first-child {
+    background-color: var(--primary);
+    color: var(--background);
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+}
